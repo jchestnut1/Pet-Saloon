@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+header.site-init{
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-image: /*add background image*/
+    background-position: center center;
+    background-size: cover;
+}
