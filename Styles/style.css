@@ -38,11 +38,10 @@ header.site-init nav{
 header.site-init nav a{
     border-radius: 30px 45px 30px 45px;
     padding: 10px;
-    height: 10px;
-    font-size: 15px;
+    height: 8px;
+    font-size: 10px;
     text-decoration: none;
     margin-bottom: 1px;
-    text-align: auto;
     background-color: lightgray;
     color: black;
     
@@ -52,6 +51,7 @@ header.site-init nav a:hover{
     background-color: red;
     text-decoration: underline;
 }
+
 
 div.main{
     margin-top: 3rem;
@@ -64,6 +64,8 @@ p{
 .container{
     margin: 1 rem auto;
     width: 70%;
+    margin-left: 0;
+    margin-top: 100px;
 }
 
 #pets{
@@ -76,4 +78,20 @@ p{
     border: 1px solid gray;
     padding: 1 rem;
     border-radius: 10px;
+}
+
+.form-container{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#petSearch{
+    width:36%
+}
+
+.btn-primary{
+    width: 30%;
+    margin-bottom: 50px;
 }

@@ -17,7 +17,7 @@ let petSaloon ={
 
 
 //constructor
-
+let c=0;
 function Pet(name,age,gender,breed,service,ownersName,contactPhone){
     this.name = name;
     this.age = age;
@@ -26,6 +26,7 @@ function Pet(name,age,gender,breed,service,ownersName,contactPhone){
     this.service = service;
     this.owner=ownersName;
     this.phone=contactPhone;
+    this.id=c++;
 }
 
 function displaySaloonInfo(){
@@ -64,7 +65,7 @@ function register(){
     //display the obj in the console
     console.log(petSaloon.pets);
     clearInputs();
-    displayPetCards();
+    displayPetTable();
     }else{
         alert("Please add required information");
     }
@@ -74,20 +75,35 @@ function clearInputs(){
     ageInput.value = "";
     genderInput.value = "";
     breedInput.value = "";
-    ownersName.value = "";
+   // ownersName.value = "";
     contactPhone.value = "";
     serviceSelect.value="";
+}
+
+function deletePet(petID){
+    let removeIndex
+    //searching the pet id into the array
+    for(let i=0; i<petSaloon.pets.length; i++) { //traveling the array
+        let pet = petSaloon.pets[i]; //get a pet values
+        if(pet.id==petID){ //compare the id with pets id's on the array
+            removeIndex = i; //get the location of the pet
+        }
+    }
+    petSaloon.pets.splice(removeIndex,1);//remove the pet from the array
+    document.getElementById(id).remove();//remove the pet from the html
+}
+
+function search(){
+    console.log(document.getElementById("petSearch"));
 }
 
 function init(){
     console.log("Registering");
     displaySaloonInfo();
     let scooby = new Pet("Scooby",30,"Male","Greyhound","Grooming","Shaggy","666-666-6666");
-    let scrappy = new Pet("Scrappy",15,"Male","Dane","Grooming","Shaggy","666-666-6666");
-    let garfield = new Pet("Garfield",5,"Male","Persian Cat","cleaning","Sarah","555-556-5555");
-    petSaloon.pets.push(scooby,scrappy,garfield);
+    petSaloon.pets.push(scooby);
 
-    displayPetCards();
+    displayPetTable();
 
 }
 

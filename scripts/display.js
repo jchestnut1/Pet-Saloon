@@ -1,6 +1,6 @@
-function displayPetCards() {
-    const petsDiv = document.getElementById("pets");
-    petsDiv.innerHTML = ``;
+function displayPetTable() {
+    const petTable = document.getElementById("petTable");
+    petTable.innerHTML = ``;
     //travel the array
     for(let i = 0; i < petSaloon.pets.length; i++){
    
@@ -9,24 +9,19 @@ function displayPetCards() {
     let pet=petSaloon.pets[i]; 
      
    //create the template
-    let tmp = `
-    <div class="pet">
-        <p>Name: ${pet.name}</p>
-        <p>Age: ${pet.age}</p>
-        <p>Gender: ${pet.gender}</p>
-        <p>Breed: ${pet.breed}</p>
-        <p>Owner: ${pet.owner}</p>
-        <p>Phone: ${pet.phone}</p>
-        <p>Service: ${pet.service}</p>
-    </div>    
+    let tr = `
+   <tr id="${pet.id}">
+        <td>"${pet.name}"</td>
+        <td>"${pet.age}"</td>
+        <td>"${pet.gender}"</td>
+        <td><button onclick="deletePet(${pet.id})">🗑️</button>
+        </td>
+    </tr>    
     `;
 
    
     //insert template into html
-    petsDiv.innerHTML+=tmp;
+    petTable.innerHTML+=tr;
     }
 }
 
-function displayPetTable(){
-
-}

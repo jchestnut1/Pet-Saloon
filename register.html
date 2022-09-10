@@ -11,14 +11,14 @@
 </head>
 <body>
 
-    <header>
+    <header class="site-init">
         <h1>The Fashion Pet</h1>
 
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="register.html">Register</a>
+            <a class="button" href="index.html">Home</a>
+            <a class="button" href="about.html">About</a>
+            <a class="button" href="services.html">Services</a>
+            <a class="button" href="register.html">Register</a>
         </nav>
     </header>
 
@@ -65,9 +65,29 @@
                     </select>
                 </div>
 
-                <button onclick="register();">Submit</button>
+                <button class="btn-primary" onclick="register();">Submit</button>
 
             </div>
+                <input type="search" id="petSearch" class="form-control">
+                <button onclick="search();" class="btn btn-primary">Search</button>
+            <div>
+
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Age</td>
+                        <td>Gender</td>
+
+                    </tr>
+
+                </thead>
+                <tbody id="petTable">
+
+                </tbody>
+            </table>
 
             <div id=pets>
 
