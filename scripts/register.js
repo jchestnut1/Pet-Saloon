@@ -75,8 +75,8 @@ function clearInputs(){
     ageInput.value = "";
     genderInput.value = "";
     breedInput.value = "";
-   // ownersName.value = "";
-    contactPhone.value = "";
+    ownersNameInput.value = "";
+    contactPhoneInput.value = "";
     serviceSelect.value="";
 }
 
